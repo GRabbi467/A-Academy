@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Poppins:wght@300&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    height: 80px;
+    background: linear-gradient(90deg,#000851 0%, #1CB5E0 100%);;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+.logo-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title{
+   font-size: xx-large;
+    padding-top: 15px;
+    margin-left: 10px;
+    color: whitesmoke;
+    font-family: 'Alkatra', cursive;
+}
+.header-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.header-links a{
+    color: white;
+    text-decoration: none;
+    padding: 0 20px 0 20px;
+    font-size:large;
+}
+.header a:hover{
+    color: blue;
+}
+
