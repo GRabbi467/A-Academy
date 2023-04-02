@@ -8,7 +8,9 @@ Putting website logo and navlink,
 create a folder name Layout => Main.js ->Header componet and Outlet Component
 
 Header contents along siade logo and name -> Courses, FAQ, Blog, toggle theme (dark/ light), and User Profile Picture (or login)
-4.
+4,5. Login system --->>Will implement later
+6. Create a fake data set
+7. 
 
 
 

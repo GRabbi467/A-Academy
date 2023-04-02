@@ -1,0 +1,38 @@
+.boxes{
+  margin: 100px;
+  margin-top: 50px;
+}
+
+#box2{
+    margin-left: 40px;
+    background:#ce63cd;
+    border-radius: 20px;
+    height: 333px;
+    width:333px;
+}
+#box1{
+    margin-left: 40px;
+    background: #2196F3;
+    border-radius: 20px;
+    height: 333px;
+    width:333px;
+}
+.icons{
+    text-align: center
+}
+.icon-holder1{
+    color: #2196F3;
+    background: whitesmoke;
+    display: inline-block;
+    border-radius: 60px;
+    box-shadow: 0 0 2px #888;
+    padding: 0.5em 0.6em;
+}
+.icon-holder2{
+    color: rgb(176, 55, 176);
+    background: whitesmoke;
+    display: inline-block;
+    border-radius: 60px;
+    box-shadow: 0 0 2px #888;
+    padding: 0.5em 0.6em;
+}

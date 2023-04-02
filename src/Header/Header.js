@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './Header.css'
 import { Link } from 'react-router-dom';
-import Image from 'react-bootstrap/Image';
 import logo from '../free-logo2.svg'
 
 
@@ -17,9 +16,9 @@ const Header = () => {
     </div>
 
 
-    <div className="header-links">
+    <div className="header-links font-semibold">
            <Link to = '/'>Home</Link>
-           <Link to = '/course'>Courses</Link>
+           <Link to = '/courses'>Courses</Link>
            <Link to = '/blog'>Blog</Link>
            <NavDropdown
               id="nav-dropdown-dark-example"

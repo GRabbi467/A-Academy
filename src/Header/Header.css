@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Poppins:wght@300&display=swap');
 body{
-    font-family: 'Poppins', sans-serif;
+    
 }
 .header{
     height: 80px;
@@ -37,6 +37,6 @@ body{
     font-size:large;
 }
 .header a:hover{
-    color: blue;
+    color: purple;
 }
 
