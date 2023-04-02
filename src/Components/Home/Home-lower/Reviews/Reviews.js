@@ -12,7 +12,7 @@ import {
 const Reviews = () => {
     return (
         <div div className='text-center'>
-        <h1 className='text-blue-500 text-center'>REVIEWS OF OUR COURSE</h1>
+        <h1 className='text-blue-500 text-center'>REVIEWS OF OUR COURSES</h1>
             <div className="review-card">
 
                 <div className="review1">
