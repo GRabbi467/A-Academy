@@ -18,7 +18,7 @@ const Course = () => {
       <Card.Img variant="top" src={image_url} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
-        <Card.Text>
+        <Card.Text className='text-blue-800'>
          {details}
         </Card.Text>
         <Card.Footer className='d-flex justify-content-between'> <span>Rating :{rating.number}</span> <span>Students:{total_enrollment}</span> </Card.Footer>

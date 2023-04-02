@@ -5,11 +5,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Outlet } from 'react-router-dom';
 import Sidebar from '../Sidebar-course/Sidebar';
+import Footer from './../Footer/Footer';
 
 const Courses = () => {
     return (
         <div>
-            <Container>
+            <Container className='container'>
                 <Row >
                     <Col className='col-1' lg={3}>
                     <Sidebar></Sidebar>
@@ -20,6 +21,7 @@ const Courses = () => {
                     <Col className='col-1' lg={2}></Col>
                 </Row>
             </Container>
+            <Footer/>
           
         </div>
     );

@@ -2,6 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
+import './CourseCard.css';
 
 const Coursecard = ({course}) => {
     return (
@@ -10,11 +11,11 @@ const Coursecard = ({course}) => {
       <Card.Img variant="top" src={course.image_url} />
       <Card.Body>
         <Card.Title>{course.title}</Card.Title>
-        <Card.Text className='font-weight-bold'>Instructor: {course.instructor.name}</Card.Text>
+        <Card.Text className='font-bold text-green-900'>Instructor: {course.instructor.name}</Card.Text>
         <Card.Text>
          {
             course.details.length > 100 ?
-            <p>{course.details.slice(0,150) + '...'} <Link to ={`/courses/course/${course._id}`}>more</Link></p>
+            <p className='course-detail'>{course.details.slice(0,150) + '...'} <Link to ={`/courses/course/${course._id}`}>more</Link></p>
             :
             <p>{course.details}</p>
          }

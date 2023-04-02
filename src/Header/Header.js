@@ -19,7 +19,7 @@ const Header = () => {
     <div className="header-links font-semibold">
            <Link to = '/'>Home</Link>
            <Link to = '/courses'>Courses</Link>
-           <Link to = '/blog'>Blog</Link>
+           <Link to = '/blog'>Pricing</Link>
            <NavDropdown
               id="nav-dropdown-dark-example"
               title="FAQ"
