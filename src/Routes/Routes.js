@@ -8,6 +8,8 @@ import Main from '../Layout/Main';
 import FAQ from './../Components/FAQ/FAQ';
 import Course from '../Course/Course';
 import Category from '../Category/Category';
+import Signup from '../Components/SignUp/Signup';
+import Login from '../Components/Login/Login';
 
  export const router = createBrowserRouter([
         {
@@ -27,7 +29,9 @@ import Category from '../Category/Category';
                 ]},
                 {path:'/blog',element:<Blog></Blog>},
                 {path:'/faq',element: <FAQ></FAQ>},
-                {path:'/about',element: <About></About>},           
+                {path:'/about',element: <About></About>},
+                {path:'/signup', element:<Signup></Signup>},
+                {path:'/login', element:<Login></Login>},           
             ]
         }
     ])

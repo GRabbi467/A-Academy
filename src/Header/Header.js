@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './Header.css'
 import { Link } from 'react-router-dom';
 import logo from '../free-logo2.svg'
+import Authprovider, { AuthContext } from '../Context/Authprovide/Authprovider';
 
 
 const Header = () => {
+  const {user} = useContext(AuthContext);
     return (
     <nav className='header'>
 
@@ -30,6 +32,8 @@ const Header = () => {
               <NavDropdown.Item Link to="#">Something</NavDropdown.Item>
             </NavDropdown>
            <Link to = '/about'>About</Link>
+           {/* <Link>{user?.user}</Link> */}
+           <Link to = 'signup'>SignUp</Link>
     </div>
 
     </nav> 
