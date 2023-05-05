@@ -10,6 +10,7 @@ import Course from '../Course/Course';
 import Category from '../Category/Category';
 import Signup from '../Components/SignUp/Signup';
 import Login from '../Components/Login/Login';
+import PrivateRoute from '../Components/Private Route/PrivateRoute';
 
  export const router = createBrowserRouter([
         {
@@ -17,7 +18,7 @@ import Login from '../Components/Login/Login';
             element:<Main></Main>,
             children : [
                 {path:'/',element:<Home></Home>},
-                {path:'/courses',element: <Courses></Courses>,
+                {path:'/courses',element: <PrivateRoute><Courses></Courses></PrivateRoute>,
                 children:[
                     {path: 'category/:id',
                     element : <Category></Category>,

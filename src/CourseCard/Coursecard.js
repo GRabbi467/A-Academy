@@ -21,7 +21,11 @@ const Coursecard = ({course}) => {
          }
         </Card.Text>
         <Card.Footer className='d-flex justify-content-between'> <span>Rating :{course.rating.number}</span> <span>Students:{course.total_enrollment}</span> </Card.Footer>
-        <Button variant="primary">Enroll this course</Button>
+        <Button variant="primary" onClick={(e) => {
+          e.preventDefault();
+          window.location.href='https://www.udemy.com/course/beginning-c-plus-plus-programming/';
+      }}>Enroll this course
+      </Button>
       </Card.Body>
     </Card>
             

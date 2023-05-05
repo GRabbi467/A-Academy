@@ -4,11 +4,17 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import './Header.css'
 import { Link } from 'react-router-dom';
 import logo from '../free-logo2.svg'
-import Authprovider, { AuthContext } from '../Context/Authprovide/Authprovider';
+import {Authprovider,AuthContext } from '../Context/Authprovide/Authprovider';
+import {Button} from 'react-bootstrap';
 
 
 const Header = () => {
-  const {user} = useContext(AuthContext);
+  const {user,logOut} = useContext(AuthContext);
+
+  const handleSignOut =()=>{
+    logOut();
+
+  }
     return (
     <nav className='header'>
 
@@ -32,8 +38,17 @@ const Header = () => {
               <NavDropdown.Item Link to="#">Something</NavDropdown.Item>
             </NavDropdown>
            <Link to = '/about'>About</Link>
-           {/* <Link>{user?.user}</Link> */}
-           <Link to = 'signup'>SignUp</Link>
+
+           {
+           (user !== null) ? 
+           <>
+           <span className='text-gray-50 text-xl'>{user?.displayName || user.email.substring(0, user.email.indexOf('@'))}</span>
+           <Button onClick={handleSignOut} variant="danger" className='ml-5 '>Log Out</Button>
+           </>
+           :
+           <Link to = '/signup'>SignUp</Link>
+           }
+           
     </div>
 
     </nav> 
