@@ -2,8 +2,16 @@ import React from 'react';
 import './HomeMiddle.css';
 import { FaHeadSideVirus ,FaUserTie,FaGraduationCap } from "react-icons/fa";
 import { Button } from "@material-tailwind/react";
+import { useNavigate } from 'react-router-dom';
+
 
 const HomeMiddle = () => {
+    const navigate = useNavigate();
+
+    const handleJoin=()=>{
+        navigate('/courses')
+        
+    }
     return (
         <div className='ml-0'>
             <h1 className='text-center text-blue-600'>ENROLL NOW AND ...</h1>
@@ -13,7 +21,7 @@ const HomeMiddle = () => {
                     <h2 className=' text-white mt-4'>Acuire Skills</h2>
                     <div className='icon-holder1'> <FaHeadSideVirus size={50}/></div>
                     <p className='mt-3 text-white text-xl '>Acquiring valuable industry skills can help you succeed in your current position and in future roles.</p>
-                    <Button className='rounded-full'>JOIN NOW</Button>
+                    <Button className='rounded-full' onClick={handleJoin}>JOIN NOW</Button>
                 </div>
 
 
@@ -24,7 +32,7 @@ const HomeMiddle = () => {
                 <h1 className=' text-white mt-4'>Get Certificates</h1>
                 <div className='icon-holder2'> <FaGraduationCap size={50}/></div>
                     <p className='mt-3 text-white text-xl '>Acquiring valuable industry skills can help you succeed in your current position and in future roles.</p>
-                    <Button className='rounded-full' color='purple'>JOIN NOW</Button>
+                    <Button className='rounded-full' color='purple' onClick={handleJoin}>JOIN NOW</Button>
                 </div>
 
 
@@ -33,7 +41,7 @@ const HomeMiddle = () => {
                     <h2 className=' text-white mt-4'>Land a Job</h2>
                     <div className='icon-holder1'> <FaUserTie size={50}/></div>
                     <p className='mt-3 text-white text-xl '>Looking for a new job can be an arduous process. However,with right strategy its easier to you. </p>
-                    <Button className='rounded-full'>JOIN NOW</Button>
+                    <Button className='rounded-full' onClick={handleJoin}>JOIN NOW</Button>
                 </div>
                 
             </div>
