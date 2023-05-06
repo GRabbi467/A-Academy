@@ -7,8 +7,10 @@ import {
     Button,
   } from "@material-tailwind/react";
   import { FaCheckCircle } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
    
   const Prices =() =>{
+    const navigate = useNavigate();
     return (
       <div className="pricing d-flex justify-evenly">
         <div className="pricing1-">
@@ -76,6 +78,11 @@ import {
             className="text-blue-500 hover:scale-[1.02] focus:scale-[1.02] active:scale-100"
             ripple={false}
             fullWidth={true}
+            onClick={e=>{
+              e.preventDefault();
+              navigate('/courses')
+              
+            }}
           >
             Enroll Now
           </Button>
@@ -150,6 +157,10 @@ import {
             className="text-blue-500 hover:scale-[1.02] focus:scale-[1.02] active:scale-100"
             ripple={false}
             fullWidth={true}
+            onClick={e=>{
+              e.preventDefault();
+              navigate('/courses')
+            }}
           >
             Enroll Now
           </Button>
@@ -223,6 +234,10 @@ import {
             className="text-blue-500 hover:scale-[1.02] focus:scale-[1.02] active:scale-100"
             ripple={false}
             fullWidth={true}
+            onClick={e=>{
+              e.preventDefault();
+              navigate('/courses')
+            }}
           >
             Enroll Now
           </Button>

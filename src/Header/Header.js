@@ -4,16 +4,27 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import './Header.css'
 import { Link } from 'react-router-dom';
 import logo from '../free-logo2.svg'
-import {Authprovider,AuthContext } from '../Context/Authprovide/Authprovider';
-import {Button} from 'react-bootstrap';
+import {AuthContext } from '../Context/Authprovide/Authprovider';
+import {Button, Image} from 'react-bootstrap';
+import { FaUserTie } from 'react-icons/fa';
+import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css';
+
+
 
 
 const Header = () => {
   const {user,logOut} = useContext(AuthContext);
+  console.log(user)
 
   const handleSignOut =()=>{
     logOut();
 
+  }
+
+  const showEmail=()=>{
+    const emaiId = user.email;
+    console.log(emaiId)
   }
     return (
     <nav className='header'>
@@ -42,12 +53,32 @@ const Header = () => {
            {
            (user !== null) ? 
            <>
-           <span className='text-gray-50 text-xl'>{user?.displayName || user.email.substring(0, user.email.indexOf('@'))}</span>
+           {/* <span className='text-gray-50 text-xl'>{user?.displayName || user.email.substring(0, user.email.indexOf('@'))}</span> */}
+           {
+            (user?.photoURL) ?
+            <Image
+            src={user.photoURL}
+            style={{height:'30px', width:'30px',borderRadius:'50%'}}
+            ></Image>
+            :
+            <>
+             <a className='mt-2' id="my-anchor-element-id"><FaUserTie size={25}></FaUserTie></a>
+             <Tooltip
+              anchorSelect="#my-anchor-element-id"
+              content={user.email}
+            />
+           </>
+
+ 
+
+           }
            <Button onClick={handleSignOut} variant="danger" className='ml-5 '>Log Out</Button>
            </>
            :
            <Link to = '/signup'>SignUp</Link>
            }
+
+        
            
     </div>
 
