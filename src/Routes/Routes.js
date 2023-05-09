@@ -11,6 +11,7 @@ import Category from '../Category/Category';
 import Signup from '../Components/SignUp/Signup';
 import Login from '../Components/Login/Login';
 import PrivateRoute from '../Components/Private Route/PrivateRoute';
+import Error404rote from '../Components/Error404_route/Error404rote';
 
  export const router = createBrowserRouter([
         {
@@ -22,18 +23,20 @@ import PrivateRoute from '../Components/Private Route/PrivateRoute';
                 children:[
                     {path: 'category/:id',
                     element : <Category></Category>,
-                    loader:({params})=> fetch(`http://localhost:5000/category/${params.id}`)},
+                    loader:({params})=> fetch(`https://edusite-server.vercel.app/category/${params.id}`)},
                     
                     {path: 'course/:id',
                     element : <Course></Course>,
-                    loader:({params})=> fetch(`http://localhost:5000/course/${params.id}`)},
+                    loader:({params})=> fetch(`https://edusite-server.vercel.app/course/${params.id}`)},
                 ]},
                 {path:'/blog',element:<Blog></Blog>},
                 {path:'/faq',element: <FAQ></FAQ>},
                 {path:'/about',element: <About></About>},
                 {path:'/signup', element:<Signup></Signup>},
-                {path:'/login', element:<Login></Login>},           
+                {path:'/login', element:<Login></Login>},
+                {path:'*' ,element:<Error404rote></Error404rote>}           
             ]
+            
         }
     ])
 
