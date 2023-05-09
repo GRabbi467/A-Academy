@@ -3,6 +3,7 @@ import './AboutContent.css';
 import ReactPlayer from 'react-player';
 import img from '../../Assets/Images/Contact.jpg';
 import { Textarea } from "@material-tailwind/react"
+import ContactUs from '../Contact Us/ContactUs';
 
 const AboutContent = () => {
     return (
@@ -34,15 +35,10 @@ const AboutContent = () => {
                 width='600px'
                 src={img} alt="" />
                 </div>
-
-                <div className="help-section ">
-                   <h1 className='text-blue-600 text-center'>Message Us</h1>
-                   <div className="text-area w-96 ">
-                        <Textarea className='' label="Will be impleneted later" />
-                   </div>
-                   
-                </div>
+                <ContactUs></ContactUs>
+                
             </div>
+            
             
         </div>
     );
